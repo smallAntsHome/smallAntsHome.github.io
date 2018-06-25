@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="ants">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="start"/>
+  <meta property="og:description" content="share" />
+  <meta property="og:site_name" content="蚂蚁的后花园"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://yoursite.com"/>
+  
+    <link rel="alternate" href="/atom.xml" title="蚂蚁的后花园" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>蚂蚁的后花园</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">start</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/<your-github-username>">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:<your-email-address>">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By ants</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2018-06-25</span>
+            <span class="time">15:30:56</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>五分钟倒数已经可以计时了。<br>三步完成免费个人博客搭建， 这是一篇小白也能看懂的文章，本文主要针对mac OS ，Windows 除了软件安装方式和命令有些区别（装了git bash也一样），其他基本一样。</p>
+<p>你可能会经常看到类似于这样的博客：</p>
+<p>vno<br>这是打酱油的</p>
+<p>在4分50秒以后你也能够有一个类似的blog了。</p>
+<p>有简书了为什么还需要个人博客呢，除了装逼，当然还有个人博客更加自由，不受任何第三方管理，并且还能够自定义成自己喜欢的样子。还有，如果你是个程序猿，那就更没有理由不自己搭建一个独立博客了。<br>好了，不BB了。抓紧时间开始。</p>
+<ol>
+<li>创建Github 域名和空间<br>1.1注册<br>首先你需要注册一个Github账号，已有的可以下翻去1.2 创建仓库，注意username，这会影响到你的域名，你的域名将会是 username.github.io ，所以认真的取个名字吧。</li>
+</ol>
+<p>Create account<br>注册过程可能需要验证你的邮箱，其他就不在赘述。</p>
+<p>1.2 创建仓库<br>然后需要创建一个仓库(repository) 来存储我们的网站，点击首页任意位置出现的 New repository按钮创建仓库, Respository name 中的username.github.io 的username 一定与前面的Owner 一致，记住你的username下面会用到。</p>
+<p>Create reponsitory<br>第一步就已经完成了，下面是安装。</p>
+<ol start="2">
+<li>安装<br>Hexo 可以说是目前最流行的博客框架了，基于Nodejs，更多信息可以google，下面需要安装的工具包括 Git，Nodejs，Hexo。（Windows 用户自行搜索这些工具，直接安装即可，试过基本没啥问题）</li>
+</ol>
+<p>安装Git<br>我就想问问，还有谁没装Git么？<br>// 如果已安装HomeBrew 无需执行此行<br>$ /usr/bin/ruby -e “$(curl -fsSL <a href="https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;" target="_blank" rel="noopener">https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</a></p>
+<p> $ brew install git   // 安装Git<br>你也可以通过下载安装程序来安装</p>
+<p>安装Nodejs<br>先安装nvm，这是Nodejs版本管理器，可以轻松切换Nodejs版本。 这里有两种方式安装。如果使用curl的方式安装，安装完成之后一定要重启终端。</p>
+<ol>
+<li><p>Homebrew 安装方式，此安装方式无需重启<br>$ brew install nvm<br>$ mkdir ~/.nvm<br>$ export NVM_DIR=~/.nvm<br>$ . $(brew –prefix nvm)/nvm.sh</p>
+<ol start="2">
+<li>curl安装方式<br>$ curl <a href="https://raw.github.com/creationix/nvm/master/install.sh" target="_blank" rel="noopener">https://raw.github.com/creationix/nvm/master/install.sh</a> | sh<br>安装完成后，重启终端 并执行下列命令即可安装 Node.js。<br>$ nvm install 4</li>
+</ol>
+</li>
+</ol>
+<p>安装Hexo<br>以上所有都安装完成之后再安装Hexo<br>$ sudo npm install hexo-cli -g<br>所有必须工具已经安装完成，下面我们就可以生成博客，上传至我们的Github 仓库了。</p>
+<ol start="3">
+<li>编写，发布<br>接下来我们需要用Hexo初始化一个博客，然后更改一些自定义的配置，或者加上自己喜欢的主题，写上第一篇文章，然后发布到自己的个人Github网站(username.github.io)。</li>
+</ol>
+<p>创建博客<br>将下面的 username 替换成你自己的username(其实也无所谓，作者强迫症)，执行成功后，会创建出一个名为 username.github.io 的文件夹。<br>$ hexo init username.github.io</p>
+<p>更改配置<br>主题安装<br>为了使博客不太难看，我们需要安装一个主题，切换至刚刚生成的Hexo 目录，安装主题<br>$ cd username.github.io<br>$ git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">https://github.com/iissnan/hexo-theme-next</a> themes/next<br>这里选了一个极简的主题，也是Hexo众多主题中最受欢迎的一个。上面出现的喵神的主题 在这里。Hexo也有更多主题供你选择。<br>基础配置：打开文件位置username.github.io/_config.yml修改几个键值对，下面把几个必须设置的列出来按需求修改，记得保存， 还有注意配置的键值之间一定要有空格。更多设置…<br>title: dimsky 的 9 维空间 //你博客的名字<br>author: dimsky //你的名字<br>language: zh-Hans //语言 中文<br>theme: next //刚刚安装的主题名称<br>deploy:<br>type: git //使用Git 发布<br>repo: <a href="https://github.com/username/username.github.io.git" target="_blank" rel="noopener">https://github.com/username/username.github.io.git</a> // 刚创建的Github仓库<br>主题配置：<br>主题配置文件在username.github.io/themes/next/_config.yml中修改，这里略过。设置详情</p>
+<p>写文章<br>所有基础框架都已经创建完成，接下来可以开始写你的第一篇博客了<br>在username.github.io/source/_posts下创建你的第一个博客吧，例如，创建一个名为FirstNight.md的文件，用Markdown大肆发挥吧，注意保存。<br>如：</p>
+<hr>
+<h2 id="title-First-Night"><a href="#title-First-Night" class="headerlink" title=" title: First Night"></a> title: First Night</h2><blockquote>
+<p>我有一头<strong>小毛驴</strong>，可是我从来都不骑。<br>测试<br>$ hexo s<br>测试服务启动，你可以在浏览器中输入<a href="https://localhost:4000" target="_blank" rel="noopener">https://localhost:4000</a> 访问了。</p>
+</blockquote>
+<p>安装hexo-deployer-git自动部署发布工具<br>$ npm install hexo-deployer-git –save</p>
+<p>发布<br>测试没问题后，我们就生成静态网页文件发布至我们的Github pages 中。<br>$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d<br>如果这是你的第一次，终端会让你输入Github 的邮箱和密码，正确输入后，骚等片刻，就会把你的博客上传至Github 了。以后在每次把博客写完后，执行一下这个命令就可以直接发布了，灰常苏胡。</p>
+<p>5分钟应该快到了<br>是不是很快，恭喜你能走到这一步，你的博客已经完成了，在浏览器中输入 <a href="http://dimsky.github.io" target="_blank" rel="noopener">http://dimsky.github.io</a> 就能够访问了。<br>最后应该是类似这个样子的</p>
+<p>时间有限，这里只说到了简单的博客创建流程，还有很多很好玩的配置与插件。比如说评论、标签、统计等等。慢慢的完善你的专属博客吧。</p>
+<p>作者：dimsky<br>链接：<a href="https://www.jianshu.com/p/4eaddcbe4d12" target="_blank" rel="noopener">https://www.jianshu.com/p/4eaddcbe4d12</a><br>來源：简书<br>简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
